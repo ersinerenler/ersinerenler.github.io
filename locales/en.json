@@ -1,0 +1,95 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "experience": "Experience",
+        "certificates": "Certificates",
+        "cves": "CVEs",
+        "contact": "Contact",
+        "blog": "Blog"
+    },
+    "hero": {
+        "description": "A passionate and experienced penetration tester with a strong background in cybersecurity and ethical hacking. Specialized in identifying and mitigating security vulnerabilities within web applications."
+    },
+    "buttons": {
+        "getInTouch": "Get in Touch",
+        "viewCVEs": "View My CVEs"
+    },
+    "sections": {
+        "experience": {
+            "title": "Professional Background",
+            "tag": "EXPERIENCE",
+            "positions": {
+                "pentester": "Penetration Tester",
+                "projectManager": "Project Manager"
+            },
+            "companies": {
+                "nscSoft": "NSC Soft | December 2023 - Present",
+                "bgaSecurity1": "BGA Security | January 2023 - December 2023",
+                "bgaSecurity2": "BGA Security | September 2022 - January 2023"
+            },
+            "descriptions": {
+                "nscSoft": "Specialized Penetration Tester proficient in identifying and securing vulnerabilities across networks, web applications, and mobile applications. Proven track record in delivering comprehensive assessments, staying current with cybersecurity trends, and effectively communicating technical findings to stakeholders.",
+                "bgaSecurity1": "As a Penetration Tester with expertise in web applications and APIs, I specialize in ensuring the security of computer systems by identifying and exploiting vulnerabilities. I have experience in conducting penetration testing of web applications and APIs and creating detailed reports outlining identified vulnerabilities and suggested remediation.",
+                "bgaSecurity2": "As a project manager with a strong background in leading cybersecurity teams, scoping and executing penetration tests, and delivering actionable insights to clients. My expertise in risk assessment, project management, and clear communication, coupled with my commitment to staying updated on industry trends, makes me a valuable asset in safeguarding digital assets and enhancing security postures for diverse organizations."
+            },
+            "responsibilities": {
+                "item1": "Conducting comprehensive penetration tests on web applications",
+                "item2": "Preparing detailed reports with findings, risk assessments, and recommended remediation steps",
+                "item3": "Collaborating with development teams to implement security best practices"
+            }
+        },
+        "certificates": {
+            "title": "Professional Certifications",
+            "tag": "CERTIFICATES",
+            "items": {
+                "ceh": {
+                    "title": "CEH",
+                    "description": "Certified Ethical Hacker by EC-COUNCIL"
+                },
+                "tse": {
+                    "title": "TSE",
+                    "description": "TSE Certified Penetration Test Expert"
+                },
+                "ewptx": {
+                    "title": "eWPTXv2",
+                    "description": "eLearnSecurity Web Application Penetration Tester eXtreme"
+                },
+                "cc": {
+                    "title": "CC",
+                    "description": "Certified in Cyber Security by ISC2"
+                },
+                "cap": {
+                    "title": "CAP",
+                    "description": "Certified AppSec Practitioner"
+                },
+                "pentestForensics": {
+                    "title": "Penetration Testing & Forensics",
+                    "description": "Penetration Testing, Incident Response and Forensics by IBM"
+                },
+                "webDev": {
+                    "title": "Web Development",
+                    "description": "Web Development with HTML, CSS, JavaScript Essentials by IBM"
+                }
+            }
+        },
+        "cves": {
+            "title": "Discovered Security Vulnerabilities",
+            "tag": "CVEs"
+        },
+        "contact": {
+            "title": "Get in Touch",
+            "tag": "CONTACT",
+            "form": {
+                "name": "Name",
+                "email": "Email",
+                "message": "Message",
+                "send": "Send Message"
+            }
+        },
+        "blog": {
+            "title": "Latest Posts",
+            "tag": "BLOG"
+        }
+    }
+} 

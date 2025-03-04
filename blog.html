@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Ersin Erenler</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .blog-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-content h3 {
+            margin: 0 0 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .blog-content .date {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .read-more {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--accent-color);
+            color: var(--bg-color);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .read-more:hover {
+            background: var(--accent-color-hover);
+        }
+        
+        .blog-post {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        
+        .blog-post img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .blog-post h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-post h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+        }
+        
+        .blog-post p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .blog-post .date {
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            display: block;
+        }
+        
+        .blog-post .references {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .blog-post .references h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .blog-post .references ol {
+            margin-left: 1.5rem;
+        }
+        
+        .blog-post .references li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .error {
+            text-align: center;
+            color: #ff4444;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <div class="space-background">
+        <div class="stars"></div>
+    </div>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"></div>
+            <div class="nav-links">
+                <a href="index.html#home" class="nav-link" data-lang="nav.home">Home</a>
+                <a href="index.html#about" class="nav-link" data-lang="nav.about">About</a>
+                <a href="index.html#experience" class="nav-link" data-lang="nav.experience">Experience</a>
+                <a href="index.html#certificates" class="nav-link" data-lang="nav.certificates">Certificates</a>
+                <a href="index.html#repositories" class="nav-link" data-lang="nav.cves">CVEs</a>
+                <a href="blog.html" class="nav-link active" data-lang="nav.blog">Blog</a>
+                <a href="index.html#contact" class="nav-link" data-lang="nav.contact">Contact</a>
+            </div>
+            <div class="language-selector">
+                <button onclick="changeLanguage('tr')" class="lang-btn">TR</button>
+                <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="blog">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-lang="sections.blog.tag">BLOG</span>
+                    <h2 data-lang="sections.blog.title">Latest Posts</h2>
+                </div>
+                <div class="blog-grid">
+                    <!-- Blog posts will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+        <article class="blog-post"></article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ersin Erenler. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html> 

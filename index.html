@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ersin Erenler | Penetration Tester</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body class="dark-theme">
+	<div class="space-background">
+		<div class="stars"></div>
+	</div>
+	<div class="cursor"></div>
+	<div class="cursor-follower"></div>
+
+	<nav class="navbar">
+		<div class="container">
+			<div class="logo"></div>
+			<div class="nav-links">
+				<a href="#home" class="nav-link" data-lang="nav.home">Home</a>
+				<a href="#about" class="nav-link" data-lang="nav.about">About</a>
+				<a href="#experience" class="nav-link" data-lang="nav.experience">Experience</a>
+				<a href="#certificates" class="nav-link" data-lang="nav.certificates">Certificates</a>
+				<a href="#repositories" class="nav-link" data-lang="nav.cves">CVEs</a>
+				<a href="blog.html" class="nav-link" data-lang="nav.blog">Blog</a>
+				<a href="#contact" class="nav-link" data-lang="nav.contact">Contact</a>
+			</div>
+			<div class="language-selector">
+				<button onclick="changeLanguage('tr')" class="lang-btn">TR</button>
+				<button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<section id="home" class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<h1 class="animate-text">Ersin Erenler</h1>
+					<div class="typewriter">
+						<span class="typed"></span>
+					</div>
+					<p class="hero-description" data-lang="hero.description">
+						A passionate and experienced penetration tester with a strong background in cybersecurity and ethical hacking. Specialized in identifying and mitigating security vulnerabilities within web applications.
+					</p>
+					<div class="hero-cta">
+						<a href="#contact" class="btn primary" data-lang="buttons.getInTouch">Get in Touch</a>
+						<a href="#repositories" class="btn secondary" data-lang="buttons.viewCVEs">View My CVEs</a>
+					</div>
+				</div>
+				<div class="hero-visual">
+					<div class="security-mesh"></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="experience" class="experience">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-tag" data-lang="sections.experience.tag">EXPERIENCE</span>
+					<h2 data-lang="sections.experience.title">Professional Background</h2>
+				</div>
+				<div class="timeline">
+					<div class="timeline-item">
+						<div class="timeline-content">
+							<h3 data-lang="sections.experience.positions.pentester">Penetration Tester</h3>
+							<h4 data-lang="sections.experience.companies.nscSoft">NSC Soft | December 2023 - Present</h4>
+							<p data-lang="sections.experience.descriptions.nscSoft">Specialized Penetration Tester proficient in identifying and securing vulnerabilities across networks, web applications, and mobile applications. Proven track record in delivering comprehensive assessments, staying current with cybersecurity trends, and effectively communicating technical findings to stakeholders.</p>
+							<ul>
+								<li data-lang="sections.experience.responsibilities.item1">Conducting comprehensive penetration tests on web applications</li>
+								<li data-lang="sections.experience.responsibilities.item2">Preparing detailed reports with findings, risk assessments, and recommended remediation steps</li>
+								<li data-lang="sections.experience.responsibilities.item3">Collaborating with development teams to implement security best practices</li>
+							</ul>
+						</div>
+					</div>
+					<div class="timeline-item">
+						<div class="timeline-content">
+							<h3 data-lang="sections.experience.positions.pentester">Penetration Tester</h3>
+							<h4 data-lang="sections.experience.companies.bgaSecurity1">BGA Security | January 2023 - December 2023</h4>
+							<p data-lang="sections.experience.descriptions.bgaSecurity1">As a Penetration Tester with expertise in web applications and APIs, I specialize in ensuring the security of computer systems by identifying and exploiting vulnerabilities. I have experience in conducting penetration testing of web applications and APIs and creating detailed reports outlining identified vulnerabilities and suggested remediation.</p>
+						</div>
+					</div>
+					<div class="timeline-item">
+						<div class="timeline-content">
+							<h3 data-lang="sections.experience.positions.projectManager">Project Manager</h3>
+							<h4 data-lang="sections.experience.companies.bgaSecurity2">BGA Security | September 2022 - January 2023</h4>
+							<p data-lang="sections.experience.descriptions.bgaSecurity2">As a project manager with a strong background in leading cybersecurity teams, scoping and executing penetration tests, and delivering actionable insights to clients. My expertise in risk assessment, project management, and clear communication, coupled with my commitment to staying updated on industry trends, makes me a valuable asset in safeguarding digital assets and enhancing security postures for diverse organizations.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="certificates" class="certificates">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-tag" data-lang="sections.certificates.tag">CERTIFICATES</span>
+					<h2 data-lang="sections.certificates.title">Professional Certifications</h2>
+				</div>
+				<div class="certificates-grid">
+					<div class="certificate-card">
+						<div class="certificate-icon">
+							<img src="images/certificates/ceh.png" alt="CEH Logo" class="cert-logo">
+						</div>
+						<h3 data-lang="sections.certificates.items.ceh.title">CEH</h3>
+						<p data-lang="sections.certificates.items.ceh.description">Certified Ethical Hacker by EC-COUNCIL</p>
+					</div>
+					<div class="certificate-card">
+						<div class="certificate-icon">
+							<img src="images/certificates/tse.png" alt="TSE Logo" class="cert-logo">
+						</div>
+						<h3 data-lang="sections.certificates.items.tse.title">TSE</h3>
+						<p data-lang="sections.certificates.items.tse.description">TSE Certified Penetration Test Expert</p>
+					</div>
+					<div class="certificate-card">
+						<div class="certificate-icon">
+							<img src="images/certificates/ewptx.png" alt="eWPTXv2 Logo" class="cert-logo">
+						</div>
+						<h3 data-lang="sections.certificates.items.ewptx.title">eWPTXv2</h3>
+						<p data-lang="sections.certificates.items.ewptx.description">eLearnSecurity Web Application Penetration Tester eXtreme</p>
+					</div>
+					<div class="certificate-card">
+						<div class="certificate-icon">
+							<img src="images/certificates/isc2.png" alt="ISC2 Logo" class="cert-logo">
+						</div>
+						<h3 data-lang="sections.certificates.items.cc.title">CC</h3>
+						<p data-lang="sections.certificates.items.cc.description">Certified in Cyber Security by ISC2</p>
+					</div>
+					<div class="certificate-card">
+						<div class="certificate-icon">
+							<img src="images/certificates/cap.png" alt="CAP Logo" class="cert-logo">
+						</div>
+						<h3 data-lang="sections.certificates.items.cap.title">CAP</h3>
+						<p data-lang="sections.certificates.items.cap.description">Certified AppSec Practitioner</p>
+					</div>
+					<div class="certificate-card">
+						<div class="certificate-icon">
+							<img src="images/certificates/ibm.png" alt="IBM Logo" class="cert-logo">
+						</div>
+						<h3 data-lang="sections.certificates.items.pentestForensics.title">Penetration Testing & Forensics</h3>
+						<p data-lang="sections.certificates.items.pentestForensics.description">Penetration Testing, Incident Response and Forensics by IBM</p>
+					</div>
+					<div class="certificate-card">
+						<div class="certificate-icon">
+							<img src="images/certificates/ibm.png" alt="IBM Logo" class="cert-logo">
+						</div>
+						<h3 data-lang="sections.certificates.items.webDev.title">Web Development</h3>
+						<p data-lang="sections.certificates.items.webDev.description">Web Development with HTML, CSS, JavaScript Essentials by IBM</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="repositories" class="repositories">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-tag" data-lang="sections.cves.tag">CVEs</span>
+					<h2 data-lang="sections.cves.title">Discovered Security Vulnerabilities</h2>
+				</div>
+				<div class="repositories-grid">
+					<div class="repository-card">
+						<h3>PHPGurukul TSAMS</h3>
+						<p>Teacher Subject Allocation Management System 1.0 Multiple Vulnerabilities</p>
+						<div class="repository-links">
+							<a href="https://github.com/ersinerenler/PHPGurukul-Teacher-Subject-Allocation-Management-System-1.0" target="_blank" class="btn secondary">
+								<i class="fab fa-github"></i> GitHub
+							</a>
+						</div>
+					</div>
+					<div class="repository-card">
+						<h3>Inventory Management</h3>
+						<p>Code-Projects Inventory Management 1.0 Multiple Vulnerabilities</p>
+						<div class="repository-links">
+							<a href="https://github.com/ersinerenler/Code-Projects-Inventory-Management-1.0" target="_blank" class="btn secondary">
+								<i class="fab fa-github"></i> GitHub
+							</a>
+						</div>
+					</div>
+					<div class="repository-card">
+						<h3>Simple Task List</h3>
+						<p>Code-Projects-Simple-Task-List-1.0 Multiple Vulnerabilities</p>
+						<div class="repository-links">
+							<a href="https://github.com/ersinerenler/Code-Projects-Simple-Task-List-1.0" target="_blank" class="btn secondary">
+								<i class="fab fa-github"></i> GitHub
+							</a>
+						</div>
+					</div>
+					<div class="repository-card">
+						<h3>Blood Bank</h3>
+						<p>Code-Projects-Blood-Bank-1.0 Multiple Vulnerabilities</p>
+						<div class="repository-links">
+							<a href="https://github.com/ersinerenler/Code-Projects-Blood-Bank-1.0" target="_blank" class="btn secondary">
+								<i class="fab fa-github"></i> GitHub
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="contact">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-tag" data-lang="sections.contact.tag">CONTACT</span>
+					<h2 data-lang="sections.contact.title">Get in Touch</h2>
+				</div>
+				<div class="contact-content">
+					<div class="contact-info">
+						<div class="contact-item">
+							<i class="fas fa-envelope"></i>
+							<h3>Email</h3>
+							<p>ersinerenler.itu@gmail.com</p>
+						</div>
+						<div class="social-links">
+							<a href="https://www.linkedin.com/in/ersin-erenler/" target="_blank" class="social-link">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="https://medium.com/@ersinerenler" target="_blank" class="social-link">
+								<i class="fab fa-medium"></i>
+							</a>
+							<a href="https://github.com/ersinerenler" target="_blank" class="social-link">
+								<i class="fab fa-github"></i>
+							</a>
+						</div>
+					</div>
+					<form id="contact-form" class="contact-form" action="https://formspree.io/f/mgveeklv" method="POST">
+						<div class="form-group">
+							<input type="text" id="name" name="name" required>
+							<label for="name" data-lang="sections.contact.form.name">Name</label>
+						</div>
+						<div class="form-group">
+							<input type="email" id="email" name="email" required>
+							<label for="email" data-lang="sections.contact.form.email">Email</label>
+						</div>
+						<div class="form-group">
+							<textarea id="message" name="message" required></textarea>
+							<label for="message" data-lang="sections.contact.form.message">Message</label>
+						</div>
+						<button type="submit" class="btn primary" data-lang="sections.contact.form.send">Send Message</button>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; 2024 Ersin Erenler. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="js/main.js"></script>
+	<script src="js/language.js"></script>
+</body>
+</html>

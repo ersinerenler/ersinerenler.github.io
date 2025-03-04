@@ -1,0 +1,95 @@
+{
+    "nav": {
+        "home": "Ana Sayfa",
+        "about": "Hakkımda",
+        "experience": "Deneyim",
+        "certificates": "Sertifikalar",
+        "cves": "CVE'ler",
+        "contact": "İletişim",
+        "blog": "Blog"
+    },
+    "hero": {
+        "description": "Siber güvenlik ve etik hackleme alanında uzmanlaşmış, deneyimli bir sızma testi uzmanı. Web uygulamalarındaki güvenlik açıklarının tespiti ve giderilmesi konusunda yetkin olup, siber tehditlere karşı güvenlik önlemlerinin güçlendirilmesine katkı sağlamaktadır"
+    },
+    "buttons": {
+        "getInTouch": "İletişime Geç",
+        "viewCVEs": "CVE'lerimi Görüntüle"
+    },
+    "sections": {
+        "experience": {
+            "title": "Profesyonel Deneyim",
+            "tag": "DENEYİM",
+            "positions": {
+                "pentester": "Penetrasyon Test Uzmanı",
+                "projectManager": "Proje Yöneticisi"
+            },
+            "companies": {
+                "nscSoft": "NSC Soft | Aralık 2023 - Devam Ediyor",
+                "bgaSecurity1": "BGA Security | Ocak 2023 - Aralık 2023",
+                "bgaSecurity2": "BGA Security | Eylül 2022 - Ocak 2023"
+            },
+            "descriptions": {
+                "nscSoft": "Ağlar, web ve mobil uygulamalar üzerinde uzmanlaşmış bir Penetrasyon Test Uzmanı olarak, güvenlik açıklarını tespit ederek ve değerlendirmeler sunarak sistemlerin güvenliğini sağlıyorum. Kapsamlı penetrasyon testleri gerçekleştiriyor, tespit edilen güvenlik açıklarını detaylandıran raporlar hazırlıyor ve geliştirici ekiplerle iş birliği yaparak güvenlik önlemlerinin güçlendirilmesine katkı sağlıyorum.",
+                "bgaSecurity1": "Web uygulamaları ve API'lerde uzmanlaşmış bir Penetrasyon Test Uzmanı olarak, güvenlik açıklarını tespit ederek ve istismar ederek sistemlerin güvenliğini sağladım. Web uygulamaları ve API'ler üzerinde penetrasyon testleri gerçekleştirdim ve tespit edilen güvenlik açıkları ile önerilen çözümleri içeren detaylı raporlar hazırladım.",
+                "bgaSecurity2": "Siber güvenlik ekiplerini yönetme, penetrasyon testlerini planlama ve yürütme, ayrıca müşterilere uygulanabilir içgörüler sunma konularında güçlü bir deneyime sahibim. Risk değerlendirmesi, proje yönetimi ve etkili iletişim konusundaki uzmanlığımı, sektördeki trendleri takip etme kararlılığımla birleştirerek, çeşitli organizasyonların dijital varlıklarını koruma ve güvenlik duruşlarını geliştirmelerine katkı sağladım."
+            },
+            "responsibilities": {
+                "item1": "Web uygulamalarında kapsamlı penetrasyon testleri gerçekleştirme",
+                "item2": "Bulgular, risk değerlendirmeleri ve önerilen düzeltme adımlarını içeren detaylı raporlar hazırlama",
+                "item3": "Güvenlik en iyi uygulamalarını uygulamak için geliştirme ekipleriyle işbirliği yapma"
+            }
+        },
+        "certificates": {
+            "title": "Profesyonel Sertifikalar",
+            "tag": "SERTİFİKALAR",
+            "items": {
+                "ceh": {
+                    "title": "CEH",
+                    "description": "EC-COUNCIL tarafından verilen Certified Ethical Hacker"
+                },
+                "tse": {
+                    "title": "TSE",
+                    "description": "TSE Sertifikalı Penetrasyon Test Uzmanı"
+                },
+                "ewptx": {
+                    "title": "eWPTXv2",
+                    "description": "eLearnSecurity Web Uygulama Penetrasyon Test Uzmanı eXtreme"
+                },
+                "cc": {
+                    "title": "CC",
+                    "description": "ISC2 tarafından verilen Siber Güvenlik Sertifikası"
+                },
+                "cap": {
+                    "title": "CAP",
+                    "description": "Sertifikalı Uygulama Güvenliği Uzmanı"
+                },
+                "pentestForensics": {
+                    "title": "Penetrasyon Testi ve Adli Bilişim",
+                    "description": "IBM tarafından verilen Penetrasyon Testi, Olay Müdahale ve Adli Bilişim"
+                },
+                "webDev": {
+                    "title": "Web Geliştirme",
+                    "description": "IBM tarafından verilen HTML, CSS, JavaScript Temel Web Geliştirme"
+                }
+            }
+        },
+        "cves": {
+            "title": "Keşfedilen Güvenlik Açıkları",
+            "tag": "CVE'LER"
+        },
+        "contact": {
+            "title": "İletişime Geç",
+            "tag": "İLETİŞİM",
+            "form": {
+                "name": "İsim",
+                "email": "E-posta",
+                "message": "Mesaj",
+                "send": "Mesaj Gönder"
+            }
+        },
+        "blog": {
+            "title": "Son Yazılar",
+            "tag": "BLOG"
+        }
+    }
+} 
