@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Editor | Ersin Erenler</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .editor-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .editor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            color: #fff;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        textarea {
+            min-height: 200px;
+            resize: vertical;
+        }
+
+        .preview {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            white-space: pre-wrap;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background: var(--accent-color);
+            color: var(--bg-color);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Space Grotesk', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background: var(--accent-color-hover);
+        }
+
+        .output {
+            margin-top: 2rem;
+        }
+
+        .copy-button {
+            margin-left: 1rem;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .success-message {
+            color: #4CAF50;
+            margin-left: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <div class="space-background">
+        <div class="stars"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"></div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="editor-container">
+        <h1>Blog Yazısı Editörü</h1>
+        
+        <div class="editor-grid">
+            <div class="editor-left">
+                <div class="input-group">
+                    <label>Blog ID (URL'de kullanılacak benzersiz kimlik):</label>
+                    <input type="text" id="blogId" placeholder="ornek-yazi">
+                </div>
+
+                <div class="input-group">
+                    <label>Türkçe Başlık:</label>
+                    <input type="text" id="titleTr" placeholder="Yazının Türkçe başlığı">
+                </div>
+
+                <div class="input-group">
+                    <label>İngilizce Başlık:</label>
+                    <input type="text" id="titleEn" placeholder="English title of the post">
+                </div>
+
+                <div class="input-group">
+                    <label>Türkçe Tarih:</label>
+                    <input type="text" id="dateTr" placeholder="20 Mart 2024">
+                </div>
+
+                <div class="input-group">
+                    <label>İngilizce Tarih:</label>
+                    <input type="text" id="dateEn" placeholder="March 20, 2024">
+                </div>
+
+                <div class="input-group">
+                    <label>Görsel Yolu:</label>
+                    <input type="text" id="image" placeholder="images/blog/ornek.jpg">
+                </div>
+
+                <div class="input-group">
+                    <label>Türkçe Açıklama:</label>
+                    <textarea id="descriptionTr" placeholder="Yazının kısa açıklaması"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>İngilizce Açıklama:</label>
+                    <textarea id="descriptionEn" placeholder="Short description of the post"></textarea>
+                </div>
+            </div>
+
+            <div class="editor-right">
+                <div class="input-group">
+                    <label>Türkçe İçerik (Markdown):</label>
+                    <textarea id="contentTr" placeholder="# Giriş
+
+Giriş paragrafı...
+
+## Birinci Bölüm
+
+İçerik...
+
+## İkinci Bölüm
+
+İçerik...
+
+## Sonuç
+
+Sonuç paragrafı...
+
+## Kaynaklar
+
+1. Kaynak 1
+2. Kaynak 2"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>İngilizce İçerik (Markdown):</label>
+                    <textarea id="contentEn" placeholder="# Introduction
+
+Introduction paragraph...
+
+## First Section
+
+Content...
+
+## Second Section
+
+Content...
+
+## Conclusion
+
+Conclusion paragraph...
+
+## References
+
+1. Reference 1
+2. Reference 2"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="generateJSON()">JSON Oluştur</button>
+
+        <div class="output">
+            <h2>JSON Çıktısı: 
+                <button onclick="copyToClipboard()" class="copy-button">Kopyala</button>
+                <span id="copySuccess" class="success-message">Kopyalandı!</span>
+            </h2>
+            <div class="preview" id="jsonOutput"></div>
+        </div>
+    </div>
+
+    <script>
+        function parseMarkdown(markdown) {
+            if (!markdown) return { intro: '', sections: [], conclusion: '', references: [] };
+
+            const lines = markdown.split('\n');
+            let currentSection = null;
+            const result = {
+                intro: '',
+                sections: [],
+                conclusion: '',
+                references: []
+            };
+
+            let isInReferences = false;
+            let currentContent = [];
+            let currentTitle = '';
+
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+
+                // Başlık kontrolü (H1, H2, H3)
+                if (line.startsWith('#')) {
+                    // Önceki bölümü kaydet
+                    if (currentContent.length > 0) {
+                        if (!result.intro) {
+                            result.intro = currentContent.join('\n').trim();
+                        } else if (currentTitle) {
+                            result.sections.push({
+                                title: currentTitle,
+                                content: currentContent.join('\n').trim()
+                            });
+                        }
+                        currentContent = [];
+                    }
+
+                    // Yeni başlığı işle
+                    const titleMatch = line.match(/^#{1,3}\s+(.+)$/);
+                    if (titleMatch) {
+                        currentTitle = titleMatch[1];
+                        if (currentTitle.toLowerCase().includes('kaynaklar') || 
+                            currentTitle.toLowerCase().includes('references')) {
+                            isInReferences = true;
+                            currentTitle = '';
+                        } else if (currentTitle.toLowerCase().includes('sonuç') || 
+                                 currentTitle.toLowerCase().includes('conclusion')) {
+                            isInReferences = false;
+                            currentTitle = '';
+                            // Sonuç bölümünü toplamaya başla
+                            result.conclusion = '';
+                            continue;
+                        }
+                    }
+                } else if (line) {
+                    if (isInReferences) {
+                        // Referans satırlarını işle (liste öğeleri veya normal metin)
+                        if (line.match(/^[-*•]\s+/) || line.match(/^\d+\.\s+/)) {
+                            result.references.push(line.replace(/^[-*•\d.]\s+/, '').trim());
+                        }
+                    } else if (!currentTitle && !result.conclusion && !result.intro) {
+                        // Henüz intro yoksa ve başlık da yoksa, intro'ya ekle
+                        currentContent.push(line);
+                    } else if (result.conclusion !== undefined && !currentTitle) {
+                        // Sonuç bölümündeyiz
+                        if (result.conclusion) {
+                            result.conclusion += '\n' + line;
+                        } else {
+                            result.conclusion = line;
+                        }
+                    } else {
+                        // Normal içerik
+                        currentContent.push(line);
+                    }
+                }
+            }
+
+            // Son bölümü kaydet
+            if (currentContent.length > 0) {
+                if (!result.intro) {
+                    result.intro = currentContent.join('\n').trim();
+                } else if (currentTitle) {
+                    result.sections.push({
+                        title: currentTitle,
+                        content: currentContent.join('\n').trim()
+                    });
+                }
+            }
+
+            return result;
+        }
+
+        function generateJSON() {
+            const blogPost = {
+                id: document.getElementById('blogId').value,
+                title: {
+                    tr: document.getElementById('titleTr').value,
+                    en: document.getElementById('titleEn').value
+                },
+                date: {
+                    tr: document.getElementById('dateTr').value,
+                    en: document.getElementById('dateEn').value
+                },
+                image: document.getElementById('image').value,
+                description: {
+                    tr: document.getElementById('descriptionTr').value,
+                    en: document.getElementById('descriptionEn').value
+                },
+                content: {
+                    tr: parseMarkdown(document.getElementById('contentTr').value),
+                    en: parseMarkdown(document.getElementById('contentEn').value)
+                }
+            };
+
+            const jsonOutput = JSON.stringify(blogPost, null, 2);
+            document.getElementById('jsonOutput').textContent = jsonOutput;
+        }
+
+        function copyToClipboard() {
+            const jsonOutput = document.getElementById('jsonOutput').textContent;
+            navigator.clipboard.writeText(jsonOutput).then(() => {
+                const successMessage = document.getElementById('copySuccess');
+                successMessage.style.display = 'inline';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html> 
