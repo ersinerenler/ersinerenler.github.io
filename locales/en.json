@@ -5,8 +5,7 @@
         "experience": "Experience",
         "certificates": "Certificates",
         "cves": "CVEs",
-        "contact": "Contact",
-        "blog": "Blog"
+        "contact": "Contact"
     },
     "hero": {
         "description": "A proactive Cyber Security Engineer leveraging a strong background in ethical hacking to build resilient defenses. Specialized in bridging the gap between offensive security and defensive operations, including vulnerability management, system hardening, and application security."
@@ -96,10 +95,6 @@
                 "message": "Message",
                 "send": "Send Message"
             }
-        },
-        "blog": {
-            "title": "Latest Posts",
-            "tag": "BLOG"
         }
     }
 } 

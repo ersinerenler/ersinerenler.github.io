@@ -5,8 +5,7 @@
         "experience": "Deneyim",
         "certificates": "Sertifikalar",
         "cves": "CVE'ler",
-        "contact": "İletişim",
-        "blog": "Blog"
+        "contact": "İletişim"
     },
     "hero": {
         "description": "Etik hackleme konusundaki güçlü birikimini kullanarak dayanıklı savunmalar kuran proaktif bir Siber Güvenlik Mühendisiyim. Zafiyet yönetimi, güvenlik sıkılaştırma ve uygulama güvenliği gibi alanlarda saldırı ve savunma operasyonları arasındaki köprüyü kurmakta uzmanım."
@@ -96,10 +95,6 @@
                 "message": "Mesaj",
                 "send": "Mesaj Gönder"
             }
-        },
-        "blog": {
-            "title": "Son Yazılar",
-            "tag": "BLOG"
         }
     }
 } 
