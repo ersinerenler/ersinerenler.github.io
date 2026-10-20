@@ -1,29 +1,18 @@
-# Personal Portfolio Website
+# ersinerenler.github.io
 
-This is my personal portfolio website showcasing my work as a Penetration Tester and Security Researcher.
+Personal website of Ersin Erenler, Cyber Security Engineer. Live at **https://ersinerenler.github.io**.
 
-## Features
+## Sections
 
-- Modern dark theme design
-- Responsive layout
-- Interactive animations
-- Contact form integration
-- Project showcase
-- Professional certifications display
+- Experience
+- Certifications (CEH, eWPTXv2, CAP, CC, TSE)
+- Discovered CVEs
+- Contact
 
-## Technologies Used
+## Tech
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- Font Awesome for icons
-- Google Fonts
-- Typed.js for typing animation
+Static HTML, CSS and vanilla JavaScript, served with GitHub Pages. Turkish/English text lives in `locales/`.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-Ersin Erenler - ersinerenler.itu@gmail.com
+MIT, see [LICENSE](LICENSE).
